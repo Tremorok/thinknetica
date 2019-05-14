@@ -10,6 +10,6 @@ else
     months["Февраль"] = 29
   end
   days_from_start = 0
-  (0...month-1).each { |i| days_from_start += $months[$months.keys[i]] }
+  (0...month-1).each { |i| days_from_start += months[months.keys[i]] }
   puts "Дней с начала года: #{days_from_start + day}"
 end
