@@ -12,9 +12,8 @@ loop do
     item_name, price, amount = input_data.split(" ")
     price = price.to_f
     amount = amount.to_f
-    #products[item_name] = {price => amount}
     products[item_name] = { pirce: price, amount: amount }
-    puts products
+    #puts products
   end
 end
 
