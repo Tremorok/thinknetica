@@ -1,3 +1,3 @@
 array_numbers = []
-10.step(100, 5) { |x| array_numbers << x }
+(10..100).step(5).to_a { |x| array_numbers << x }
 puts array_numbers

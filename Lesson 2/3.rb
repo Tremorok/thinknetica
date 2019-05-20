@@ -1,16 +1,15 @@
-f_numbers = [0]
-f_number = 1
+fibonacci_numbers = [0]
+next_number = 1
 
 def fib(f)
-  i = f.size
-  f[i-2] + f[i-1]
+  f[-1] + f[-2]
 end
 puts "До какого числа вы хотите заполнить массив?"
-input_data = gets.chomp.to_i
-while f_number < input_data do
-  f_numbers.push(f_number)
-  f_number = fib(f_numbers)
+input_data = gets.to_i
+while next_number < input_data do
+  fibonacci_numbers.push(next_number)
+  next_number = fib(fibonacci_numbers)
 end
 
 puts "Числа Фибоначчи"
-puts f_numbers
+puts fibonacci_numbers

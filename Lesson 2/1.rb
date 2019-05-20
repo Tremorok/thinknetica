@@ -1,15 +1,17 @@
 months = {
-  Январь: 31,
-  Февраль: 28,
-  Март: 31,
-  Апрель: 30,
-  Май: 31,
-  Июнь: 30,
-  Июль: 31,
-  Август: 31,
-  Сентябрь: 30,
-  Октябрь: 31,
-  Ноябрь: 30,
-  Декабрь: 31,
+  January: 31,
+  February: 28,
+  March: 31,
+  April: 30,
+  May: 31,
+  June: 30,
+  July: 31,
+  August: 31,
+  September: 30,
+  October: 31,
+  November: 30,
+  December: 31,
 }
-puts months.select { |name, days| days == 30 }
+months.each do |name, days|
+  puts name if days == 30
+end
