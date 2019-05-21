@@ -9,6 +9,5 @@ if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
   puts "Год является высокосным."
   months[1] = 29
 end
-days_from_start = 0
-(0...month-1).sum { |i| days_from_start += months[i] }
+days_from_start = day + months.take(month - 1).sum
 puts "Дней с начала года: #{days_from_start + day}"
