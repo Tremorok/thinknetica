@@ -10,17 +10,17 @@ class station
   end
 
 
-  def accepted_trains #выводит список принятых поездов (все)
+  def accepted_trains
     puts @trains
   end
 
 
-  def accepted_trains_by_type #выводит список принятых поездов (по типам)
+  def accepted_trains_by_type
     @trains.select { |train| train.type == train_type }
   end
 
 
-  def train_send #отправляет поезда
+  def train_send
     @trains.delete(train)
     puts "Станция #{@name} - Поезд #{train.number} отправлен"
   end
