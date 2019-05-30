@@ -1,5 +1,6 @@
 class Route
-  attr_reader :routes
+  attr_reader :stations
+
   def initialize(first_station, last_station)
     @stations = [first_station, last_station]
   end
@@ -9,8 +10,7 @@ class Route
   end
 
   def delete_station(station)
-    if stations != @stations.first && station != @stations.last
-      @stations.delete(station)
-    end
+    return if [@station.first, @stations.last].include?(station)
+    @stations.delete(station)
   end
 end
